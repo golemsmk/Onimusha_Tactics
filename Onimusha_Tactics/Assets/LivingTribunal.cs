@@ -6,8 +6,10 @@ public class LivingTribunal : MonoBehaviour {
 
     public GameObject cubePrefab, riverPrefab;
 
-    public int height = 10;
-    public int width = 8;
+    public MapBlock[] map;
+
+    public int height = 5;
+    public int width = 4;
     
     // Use this for initialization
 	void Start () {
@@ -16,8 +18,16 @@ public class LivingTribunal : MonoBehaviour {
         {
             for (int j = 0; j < width; j++)
             {
-                tempGameObject = Instantiate(cubePrefab);
-                tempGameObject.transform.position = new Vector3(1 * i, 0, 1 * j);
+                if (map[i*width+j].codeIndex == 0)
+                {
+                    tempGameObject = Instantiate(riverPrefab);
+                    tempGameObject.transform.position = new Vector3(1 * i, 0, 1 * j);
+                }
+                else if (map[i * width + j].codeIndex == 1)
+                {
+                    tempGameObject = Instantiate(cubePrefab);
+                    tempGameObject.transform.position = new Vector3(1 * i, 0, 1 * j);
+                }
             }
         }
 	}
@@ -26,4 +36,9 @@ public class LivingTribunal : MonoBehaviour {
 	void Update () {
 		
 	}
+}
+[System.Serializable]
+public class MapBlock
+{
+    public int codeIndex = 0;
 }
