@@ -3,7 +3,12 @@ guid: acc8b08b41e70dc45b6eb70ffcb2ce12
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cubePrefab: {fileID: 1975019829003254, guid: 3a19a532c69cbb840bb705825978ba74,
+      type: 2}
+  - riverPrefab: {fileID: 1779593872947498, guid: 0682a85dd6a0e3c4c8d4ede2309b9bcf,
+      type: 2}
+  - sandPrefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
