@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33552444275070804}
   - component: {fileID: 23326202092444884}
   m_Layer: 0
-  m_Name: Pf_Water_Block 1
+  m_Name: Pf_Lava_Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
