@@ -627,15 +627,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 770487663}
   riverPrefab: {fileID: 470294256}
-  sand: {fileID: 34612229}
-  volcalu: {fileID: 236374661}
+  sandPrefab: {fileID: 34612229}
   map:
   - codeIndex: 1
   - codeIndex: 0
   - codeIndex: 0
   - codeIndex: 2
   - codeIndex: 0
-  - codeIndex: 3
+  - codeIndex: 2
   - codeIndex: 0
   - codeIndex: 1
   - codeIndex: 0
@@ -643,7 +642,7 @@ MonoBehaviour:
   - codeIndex: 1
   - codeIndex: 0
   - codeIndex: 1
-  - codeIndex: 3
+  - codeIndex: 2
   - codeIndex: 0
   - codeIndex: 0
   - codeIndex: 2
