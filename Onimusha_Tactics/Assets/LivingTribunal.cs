@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LivingTribunal : MonoBehaviour {
 
-    public GameObject cubePrefab, riverPrefab, sandPrefab;
+    public GameObject grassPrefab, riverPrefab, sandPrefab, lavaPrefab;
 
     public MapBlock[] map;
 
@@ -13,27 +13,30 @@ public class LivingTribunal : MonoBehaviour {
     
     // Use this for initialization
 	void Start () {
-        GameObject tempGameObject;
+        GameObject tempGameObject, prefabSelection;
+        prefabSelection = grassPrefab;
         for (int i = 0; i < height; i++)
         {
             for (int j = 0; j < width; j++)
             {
                 if (map[i*width+j].codeIndex == 0)
                 {
-                    tempGameObject = Instantiate(riverPrefab);
-                    tempGameObject.transform.position = new Vector3(1 * i, 0, 1 * j);
+                    prefabSelection = grassPrefab;
                 }
                 else if (map[i * width + j].codeIndex == 1)
                 {
-                    tempGameObject = Instantiate(cubePrefab);
-                    tempGameObject.transform.position = new Vector3(1 * i, 0, 1 * j);
+                    prefabSelection = riverPrefab;
                 }
                 else if (map[i * width + j].codeIndex == 2)
                 {
-                    tempGameObject = Instantiate(sandPrefab);
-                    tempGameObject.transform.position = new Vector3(1 * i, 0, 1 * j);
+                    prefabSelection = sandPrefab;
                 }
-                
+                else if (map[i * width + j].codeIndex == 3)
+                {
+                    prefabSelection = lavaPrefab;
+                }
+                tempGameObject = Instantiate(prefabSelection);
+                tempGameObject.transform.position = new Vector3(1 * i, 0, 1 * j);
             }
         }
 	}

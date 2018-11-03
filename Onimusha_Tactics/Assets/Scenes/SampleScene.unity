@@ -283,11 +283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc8b08b41e70dc45b6eb70ffcb2ce12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 1593109986947966, guid: eb7ed951940f73c4f88d36da873c3078, type: 2}
+  grassPrefab: {fileID: 1593109986947966, guid: eb7ed951940f73c4f88d36da873c3078,
+    type: 2}
   riverPrefab: {fileID: 1593109986947966, guid: 07ea6fda6fce87f459693fa9587329f8,
     type: 2}
-  sand: {fileID: 1593109986947966, guid: 92136d235db88094eb178d1bf8e906fe, type: 2}
-  volcalu: {fileID: 1593109986947966, guid: d16d7753a7866ff45b7a7839840ddc8c, type: 2}
+  sandPrefab: {fileID: 1593109986947966, guid: 92136d235db88094eb178d1bf8e906fe, type: 2}
+  lavaPrefab: {fileID: 1593109986947966, guid: d16d7753a7866ff45b7a7839840ddc8c, type: 2}
   map:
   - codeIndex: 1
   - codeIndex: 0
