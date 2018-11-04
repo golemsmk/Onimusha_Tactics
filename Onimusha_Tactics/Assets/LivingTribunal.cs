@@ -6,18 +6,29 @@ public class LivingTribunal : MonoBehaviour {
 
     public GameObject grassPrefab, riverPrefab, sandPrefab, lavaPrefab;
 
-    public MapBlock[] map;
+    private MapBlock[] map;
 
-    public int height = 5;
-    public int width = 4;
+    private int height = 5;
+    private int width = 4;
     
     // Use this for initialization
 	void Start () {
+        height = GetComponent<TestJson>().customObject.height;
+        width = GetComponent<TestJson>().customObject.width;
+        map = new MapBlock[height * width];
+        for(int a=1;a<height;a++)
+        {
+            for(int b=1;b<width;b++)
+            {
+                map[a*width+b].codeIndex = GetComponent<TestJson>().customObject.layers[0].data[a*width+b];
+            }
+        }
+       
         GameObject tempGameObject, prefabSelection;
         prefabSelection = grassPrefab;
-        for (int i = 0; i < height; i++)
+        for (int i = 1; i < height; i++)
         {
-            for (int j = 0; j < width; j++)
+            for (int j = 1; j < width; j++)
             {
                 if (map[i*width+j].codeIndex == 0)
                 {
