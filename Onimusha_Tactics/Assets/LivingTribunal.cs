@@ -16,11 +16,12 @@ public class LivingTribunal : MonoBehaviour {
         height = GetComponent<TestJson>().customObject.height;
         width = GetComponent<TestJson>().customObject.width;
         map = new MapBlock[height * width];
-        for(int a=1;a<height;a++)
+        for (int a=0;a<height;a++)
         {
-            for(int b=1;b<width;b++)
+            for(int b=0;b<width;b++)
             {
-                map[a*width+b].codeIndex = GetComponent<TestJson>().customObject.layers[0].data[a*width+b];
+                map[a * width + b] = new MapBlock();
+                map[a * width + b].codeIndex = GetComponent<TestJson>().customObject.layers[0].data[a*width+b]-1;
             }
         }
        
@@ -60,5 +61,5 @@ public class LivingTribunal : MonoBehaviour {
 [System.Serializable]
 public class MapBlock
 {
-    public int codeIndex = 0;
+    public int codeIndex;
 }
